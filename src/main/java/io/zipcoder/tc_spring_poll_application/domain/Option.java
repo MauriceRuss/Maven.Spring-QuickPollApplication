@@ -10,10 +10,10 @@ public class Option {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "OPTION_ID")
-    private Long id;
+     Long id;
 
     @Column(name = "OPTION_VALUE")
-    private String value;
+     String value;
 
     public Option() {
     }

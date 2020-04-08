@@ -7,12 +7,12 @@ import java.util.Set;
 public class Poll {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "POLL_ID")
-    private Long id;
+     Long id;
 
     @Column(name = "QUESTION")
-    private String question;
+     String question;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "POLL_ID")
