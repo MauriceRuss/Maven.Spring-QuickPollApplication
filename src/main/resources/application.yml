@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    platform: mysql
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/buildanddestroy
+    username: zcuser
+    password: zcpass
+   jpa:
+     database: MYSQL
+     hibernate.ddl-auto: update
+       generate-ddl: true
+       show-sql: true
+

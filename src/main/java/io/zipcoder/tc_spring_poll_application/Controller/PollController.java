@@ -23,11 +23,11 @@ public class PollController {
         this.pollRepository = pollRepository;
     }
 
-        @RequestMapping(value="/polls", method= RequestMethod.GET)
-        public ResponseEntity<Iterable<Poll>> getAllPolls(){
-            Iterable<Poll> allPolls = pollRepository.findAll();
-            return new ResponseEntity<>(allPolls, HttpStatus.OK);
-        }
+    @RequestMapping(value="/polls", method= RequestMethod.GET)
+    public ResponseEntity<Iterable<Poll>> getAllPolls(){
+        Iterable<Poll> allPolls = pollRepository.findAll();
+        return new ResponseEntity<>(allPolls, HttpStatus.OK);
+    }
 
 
     @RequestMapping(value="/polls", method=RequestMethod.POST)
@@ -66,6 +66,7 @@ public class PollController {
         if(pollRepository.exists(pollId)){
             throw new ResourceNotFoundException("No poll found.");
         }
+
     }
 
 }

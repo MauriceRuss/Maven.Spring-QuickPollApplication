@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.web.ResourceProperties;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "options")
 public class Option {
 
     @Id
